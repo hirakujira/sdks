@@ -87,6 +87,11 @@ xcode_sim_runtime_path="$xcode_developer_path/Platforms/iPhoneOS.platform/Develo
 if [ ! -d $xcode_sim_runtime_path ]; then
     xcode_sim_runtime_path="$xcode_developer_path/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot"
 fi
+
+if [ ! -d $xcode_sim_runtime_path ]; then
+    xcode_sim_runtime_path="$xcode_developer_path/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/"
+fi
+
 xcode_default_sdk_path="$xcode_developer_path/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk"
 
 xcode_sdk_paths="$xcode_developer_path/Platforms/iPhoneOS.platform/Developer/SDKs/*"
